@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Scriptina - Alternates';
+    src: url('../fonts/scriptina/Scriptina-Alternates.eot');
+    src: url('../fonts/scriptina/Scriptina-Alternates.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/scriptina/Scriptina-Alternates.woff2') format('woff2'),
+        url('../fonts/scriptina/Scriptina-Alternates.woff') format('woff'),
+        url('../fonts/scriptina/Scriptina-Alternates.ttf') format('truetype'),
+        url('../fonts/scriptina/Scriptina-Alternates.svg#Scriptina-Alternates') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scriptina';
+    src: url('../fonts/scriptina/Scriptina.eot');
+    src: url('../fonts/scriptina/Scriptina.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/scriptina/Scriptina.woff2') format('woff2'),
+        url('../fonts/scriptina/Scriptina.woff') format('woff'),
+        url('../fonts/scriptina/Scriptina.ttf') format('truetype'),
+        url('../fonts/scriptina/Scriptina.svg#Scriptina') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/cinzel/Cinzel-Bold.eot');
+    src: url('../fonts/cinzel/Cinzel-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/cinzel/Cinzel-Bold.woff2') format('woff2'),
+        url('../fonts/cinzel/Cinzel-Bold.woff') format('woff'),
+        url('../fonts/cinzel/Cinzel-Bold.ttf') format('truetype'),
+        url('../fonts/cinzel/Cinzel-Bold.svg#Cinzel-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/cinzel/Cinzel-Black.eot');
+    src: url('../fonts/cinzel/Cinzel-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/cinzel/Cinzel-Black.woff2') format('woff2'),
+        url('../fonts/cinzel/Cinzel-Black.woff') format('woff'),
+        url('../fonts/cinzel/Cinzel-Black.ttf') format('truetype'),
+        url('../fonts/cinzel/Cinzel-Black.svg#Cinzel-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/cinzel/Cinzel-ExtraBold.eot');
+    src: url('../fonts/cinzel/Cinzel-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/cinzel/Cinzel-ExtraBold.woff2') format('woff2'),
+        url('../fonts/cinzel/Cinzel-ExtraBold.woff') format('woff'),
+        url('../fonts/cinzel/Cinzel-ExtraBold.ttf') format('truetype'),
+        url('../fonts/cinzel/Cinzel-ExtraBold.svg#Cinzel-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/cinzel/Cinzel-Medium.eot');
+    src: url('../fonts/cinzel/Cinzel-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/cinzel/Cinzel-Medium.woff2') format('woff2'),
+        url('../fonts/cinzel/Cinzel-Medium.woff') format('woff'),
+        url('../fonts/cinzel/Cinzel-Medium.ttf') format('truetype'),
+        url('../fonts/cinzel/Cinzel-Medium.svg#Cinzel-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/cinzel/Cinzel-Regular.eot');
+    src: url('../fonts/cinzel/Cinzel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/cinzel/Cinzel-Regular.woff2') format('woff2'),
+        url('../fonts/cinzel/Cinzel-Regular.woff') format('woff'),
+        url('../fonts/cinzel/Cinzel-Regular.ttf') format('truetype'),
+        url('../fonts/cinzel/Cinzel-Regular.svg#Cinzel-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/cinzel/Cinzel-SemiBold.eot');
+    src: url('../fonts/cinzel/Cinzel-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/cinzel/Cinzel-SemiBold.woff2') format('woff2'),
+        url('../fonts/cinzel/Cinzel-SemiBold.woff') format('woff'),
+        url('../fonts/cinzel/Cinzel-SemiBold.ttf') format('truetype'),
+        url('../fonts/cinzel/Cinzel-SemiBold.svg#Cinzel-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
