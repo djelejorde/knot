@@ -1,7 +1,7 @@
 <template>
-  <div class="flex-col">
-    <div class="w-full text-center my-10">
-      <h2 class="font-scriptina text-navy text-5xl mb-8">
+  <div class="flex-col py-10">
+    <div id="attire" class="w-full text-center mb-10">
+      <h2 class="font-scriptina text-navy text-5xl my-8">
         Attire
       </h2>
       <div class="font-body">
@@ -25,12 +25,12 @@
       </div>
     </div>
 
-    <div class="w-full text-center my-10">
-      <h2 class="font-scriptina text-navy text-5xl mb-8">
+    <div id="map" class="w-full text-center mb-10">
+      <h2 class="font-scriptina text-navy text-5xl my-8">
         Map Guide
       </h2>
 
-      <div class="w-2/3 mx-auto">
+      <div class="w-5/6 lg:w-2/3 mx-auto">
         <img :src="require('@/static/map.png')" width="100%">
       </div>
     </div>

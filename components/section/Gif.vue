@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-3/5 px-8 my-10">
+    <div class="lg:w-5/6 xl:w-3/5 px-8 my-10">
       <img :src="source" width="100%">
     </div>
   </div>

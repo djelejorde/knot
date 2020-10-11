@@ -1,22 +1,22 @@
 <template>
-  <header class="bg-white w-100 z-100 shadow">
+  <header class="relative bg-white w-100 z-50 shadow">
     <ul class="nav font-cinzel text-navy flex flex-wrap text-center justify-center items-center font-medium">
-      <nuxt-link class="nav-item relative" to="us">
+      <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#us'}">
         <li class="py-5 px-7">
           US
         </li>
       </nuxt-link>
-      <nuxt-link class="nav-item relative" to="rsvp">
+      <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#rsvp'}">
         <li class="py-5 px-7">
           RSVP
         </li>
       </nuxt-link>
-      <nuxt-link class="nav-item relative" to="attire">
+      <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#attire'}">
         <li class="py-5 px-7">
           ATTIRE
         </li>
       </nuxt-link>
-      <nuxt-link class="nav-item relative" to="map">
+      <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#map'}">
         <li class="py-5 px-7">
           MAP
         </li>

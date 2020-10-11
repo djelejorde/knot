@@ -1,17 +1,13 @@
 <template>
   <div class="border border-navy">
-    <input class="border-0 py-3 px-4 w-full font-cinzel" :type="type" :name="name" :placeholder="placeholder">
+    <textarea rows="3" class="border-0 py-3 px-4 w-full font-cinzel" :name="name" :placeholder="placeholder" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TextInput',
+  name: 'TextArea',
   props: {
-    type: {
-      type: String,
-      default: 'text'
-    },
     name: {
       type: String,
       required: true
@@ -25,7 +21,8 @@ export default {
 </script>
 
 <style scoped>
-input {
+textarea {
+  resize: none;
   outline: none;
 }
 </style>

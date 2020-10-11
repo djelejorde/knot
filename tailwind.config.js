@@ -37,9 +37,6 @@ module.exports = {
       10: '8rem',
       11: '9rem'
     },
-    letterSpacing: {
-      distanced: '1rem'
-    },
     maxHeight: theme => ({
       ...theme('spacing'),
       90: '90%'
@@ -54,10 +51,19 @@ module.exports = {
         8: '3rem',
         9: '4rem',
         10: '5rem'
-      }
+      },
+      letterSpacing: {
+        distanced: '1rem'
+      },
+      screens: {
+        'xxs': '320',
+        'xs': '480',
+      },
     }
   },
   variants: {
+    fontSize: ['responsive', 'hover', 'focus', 'important'],
+    letterSpacing: ['responsive', 'hover', 'focus', 'important'],
     textColor: ['responsive', 'hover', 'focus', 'important'],
     borderWidth: ['responsive', 'hover', 'focus', 'important'],
     borderColor: ['responsive', 'hover', 'focus', 'important'],

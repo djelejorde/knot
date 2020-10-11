@@ -8,15 +8,24 @@
   </svg>
 </template>
 
-<style>
+<style scoped>
 .monogram {
-  animation: 4s appear;
+  /* animation: 4s appear; */
   margin: auto;
 }
+/* .monogram.fade-out {
+  animation: 4s fadeout;
+} */
 
-@keyframes appear {
+/* @keyframes appear {
   0% {
     opacity: 0;
   }
-}
+} */
+
+/* @keyframes fadeout {
+  100% {
+    opacity: 0;
+  }
+} */
 </style>

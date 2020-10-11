@@ -1,23 +1,53 @@
 <template>
   <div class="w-full">
-    <Hero />
-    <Header />
-    <Us />
-    <Monogram />
-    <Gif class="container content" :source="require('@/static/meet.gif')" />
-    <Rsvp class="container content h-screen" />
-    <Details class="container content" />
-    <Gif class="container content" :source="require('@/static/hdnl.gif')" />
-    <Monogram />
-    <Footer />
+    <div id="logo" class="z-50 fixed inset-0 bg-white hidden">
+      <Logo class="w-64 fade-out" />
+    </div>
+    <div class="main z-40 relative">
+      <Hero />
+      <Header />
+      <Us id="us" />
+      <Monogram />
+      <Gif class="container content" :source="require('@/static/meet.gif')" />
+      <Rsvp id="rsvp" class="container content md:h-screen" />
+      <Details class="container content" />
+      <Gif class="container content" :source="require('@/static/hdnl.gif')" />
+      <Monogram />
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  mounted () {
+    // setTimeout(function () {
+    //   document.querySelector('#logo').style.display = 'none'
+    // }, 3800)
+  }
+}
 </script>
 
-<style>
+<style scoped>
+#logo {
+  animation: 4s fading;
+}
+
+@keyframes fading {
+  0% {
+    display: none;
+  }
+
+  1% {
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
 .container.full {
   margin: 0 auto;
   width: 100%;
