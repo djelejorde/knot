@@ -19,7 +19,7 @@
       </div>
 
       <parallax :section-class="'parallax'" :breakpoint="'(min-width: 768px)'" :section-height="sectionHeight">
-        <img :src="require('@/static/hero.jpg')" width="100%">
+        <img :src="require('@/static/hero_optimized.jpg')" width="100%">
       </parallax>
     </div>
   </main>

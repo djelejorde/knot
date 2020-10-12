@@ -8,7 +8,7 @@
       <Header />
       <Us id="us" />
       <Monogram />
-      <Gif class="container content" :source="require('@/static/meet.gif')" />
+      <Gif class="container content" :source="require('@/static/meet_optimized.gif')" />
       <Rsvp id="rsvp" class="container content md:h-screen" />
       <Details class="container content" />
       <Gif class="container content" :source="require('@/static/hdnl.gif')" />
@@ -20,34 +20,10 @@
 
 <script>
 export default {
-  mounted () {
-    // setTimeout(function () {
-    //   document.querySelector('#logo').style.display = 'none'
-    // }, 3800)
-  }
 }
 </script>
 
 <style scoped>
-#logo {
-  animation: 4s fading;
-}
-
-@keyframes fading {
-  0% {
-    display: none;
-  }
-
-  1% {
-    display: block;
-  }
-
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
-
 .container.full {
   margin: 0 auto;
   width: 100%;
