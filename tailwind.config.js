@@ -47,7 +47,6 @@ module.exports = {
       initial: 'initial'
     }),
     screens: {
-      'xxs': '320px',
       'xs': '480px',
       'sm': '640px',
       'md': '1024px',

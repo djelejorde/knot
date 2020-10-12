@@ -1,7 +1,7 @@
 <template>
   <div class="relative bg-white z-40 flex flex-wrap py-10">
     <div
-      class="block w-full font-scriptina text-navy text-5xl mb-7 text-navy text-center"
+      class="block w-full font-scriptina text-navy text-4xl xs:text-5xl mb-7 text-navy text-center"
     >
       Bride &nbsp;&amp; Groom
     </div>
