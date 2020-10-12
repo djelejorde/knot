@@ -8,11 +8,11 @@
 
     <div class="block w-full mt-7">
       <div class="flex md:flex-row-reverse flex-wrap w-10/12 mx-auto">
-        <div class="text-left font-body w-full md:w-1/4 md:ml-4 flex flex-wrap">
-          <div class="md:w-full md:hidden flex-1 relative">
+        <div class="text-left font-body w-full md:w-1/4 md:ml-4 flex flex-wrap flex-col-reverse sm:flex-col">
+          <div class="md:w-full md:hidden sm:flex-1 mb-5 sm:mb-0 relative">
             <img class="z-40 block casual" :src="require('@/static/casual_fade.jpg')" width="100%">
           </div>
-          <div class="w-1/2 pl-4 md:pl-0 md:w-full">
+          <div class="w-full sm:w-1/2 pb-5 sm:pb-0 sm:pl-4 md:pl-0 md:w-full">
             <div class="md:w-full w-1/4 text-navy font-bold md:text-xl lg:text-2xl">
               HIM
             </div>
@@ -37,7 +37,7 @@
           <img class="wacky hidden" :src="require('@/static/wacky_fade.jpg')" width="100%">
         </div>
         <div class="text-right font-body md:w-1/4 md:mr-4 flex flex-wrap">
-          <div class="w-1/2 pr-4 md:pr-0 md:w-full mt-2 md:mt-0">
+          <div class="w-full sm:w-1/2 pb-5 sm:pb-0 sm:pr-4 md:pr-0 md:w-full mt-2 md:mt-0">
             <div class="text-navy font-bold md:text-xl lg:text-2xl">
               HER
             </div>
@@ -57,7 +57,7 @@
             </div>
         </div>
 
-          <div class="md:w-full flex-1 relative">
+          <div class="md:w-full sm:flex-1 relative">
             <img class="z-40 block casual" :src="require('@/static/wacky_fade.jpg')" width="100%">
           </div>
         </div>

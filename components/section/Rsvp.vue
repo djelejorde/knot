@@ -5,7 +5,7 @@
     </h1>
 
     <div class="flex flex-wrap w-full">
-      <div class="w-full md:w-1/2 py-5 pr-5 md:border-r border-opacity-25 border-navy">
+      <div class="w-full md:w-1/2 py-5 sm:pr-5 md:border-r border-opacity-25 border-navy">
         <h3 class="font-cinzel text-navy font-bold text-md lg:text-lg xl:text-xl">
           WE'RE LOOKING FORWARD TO HAVE YOU
         </h3>
@@ -21,17 +21,17 @@
 
             <TextArea class="my-7" :name="'allergies'" :placeholder="'allergies, if any'" />
 
-            <Dropdown class="my-7" :name="'rice'" :placeholder="'preferred type of rice'" :options="['steam', 'seafood paella']" />
+            <Dropdown class="my-7" :name="'rice'" :placeholder="'preferred type of rice'" :options="['Steam', 'Seafood Paella']" />
 
             <Button>GOING!</Button>
           </form>
         </div>
       </div>
 
-      <div class="w-full md:w-1/2 mt-10 md:mt-0 pt-5 text-navy pl-5">
+      <div class="w-full md:w-1/2 mt-10 md:mt-0 pt-5 text-navy sm:pl-5">
         <div class="font-cinzel tracking-distanced md:text-sm lg:text-md xl:text-xl">
-          <span class="inline md:hidden xl:inline">NOVEMBER</span>
-          <span class="hidden lg:inline xl:hidden">NOV</span> <span class="inline md:hidden lg:inline">12, 2020</span>
+          <span class="hidden sm:inline md:hidden xl:inline">NOVEMBER</span>
+          <span class="inline sm:hidden lg:inline xl:hidden">NOV</span> <span class="inline md:hidden lg:inline">12, 2020</span>
           <span class="hidden md:inline lg:hidden">11•12•2020</span>
           <br>
           THURSDAY

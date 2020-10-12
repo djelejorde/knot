@@ -21,6 +21,7 @@ module.exports = {
       scriptina: '"Scriptina"'
     },
     fontSize: {
+      xxs: '.5rem',
       xs: '.75rem',
       sm: '.875rem',
       base: '1rem',
@@ -45,6 +46,14 @@ module.exports = {
       ...theme('spacing'),
       initial: 'initial'
     }),
+    screens: {
+      'xxs': '320px',
+      'xs': '480px',
+      'sm': '640px',
+      'md': '1024px',
+      'lg': '1280px',
+      'xl': '1440px'
+    },
     extend: {
       spacing: {
         7: '2rem',
@@ -54,11 +63,7 @@ module.exports = {
       },
       letterSpacing: {
         distanced: '1rem'
-      },
-      screens: {
-        'xxs': '320',
-        'xs': '480',
-      },
+      }
     }
   },
   variants: {

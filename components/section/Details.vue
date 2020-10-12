@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-col py-10">
+  <div class="flex-col py-6 sm:py-10">
     <div id="attire" class="w-full text-center mb-10">
       <h2 class="font-scriptina text-navy text-5xl my-8">
         Attire

@@ -1,10 +1,10 @@
 <template>
   <div class="relative border border-navy px-4">
     <select
-      class="border-0 py-3 w-full font-cinzel"
+      class="border-0 py-3 w-full font-cinzel bg-white"
       :name="name"
     >
-      <option class="text-gray-100 opacity-25">
+      <option class="!text-gray-100 opacity-25">
         {{ placeholder }}
       </option>
       <option
