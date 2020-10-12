@@ -17,18 +17,7 @@
               HIM
             </div>
             <div class="text-gray-100 text-xs lg:text-sm leading-tight">
-              Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit
-              in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt
-              in culpa qui officia deserunt mollit
-              anim id est laborum.
+              {{ contents.him }}
             </div>
           </div>
         </div>
@@ -42,18 +31,7 @@
               HER
             </div>
             <div class="text-gray-100 text-xs lg:text-sm leading-tight">
-              Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit
-              in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt
-              in culpa qui officia deserunt mollit
-              anim id est laborum.
+              {{ contents.her }}
             </div>
           </div>
 
@@ -68,7 +46,20 @@
 
 <script>
 export default {
-  name: 'UsSection'
+  name: 'UsSection',
+  data () {
+    return {
+      contents: {}
+    }
+  },
+  mounted () {
+    this.fetchCollectionData('/contents')
+      .then((response) => {
+        if (response.data && Object.keys(response.data.data).length) {
+          this.contents = response.data.data[0]
+        }
+      })
+  }
 }
 </script>
 

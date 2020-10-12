@@ -1,20 +1,26 @@
 <template>
-  <div class="relative border border-navy px-4">
-    <select
-      class="border-0 py-3 w-full font-cinzel bg-white"
-      :name="name"
-      :required="required"
-    >
-      <option class="!text-gray-100 opacity-25">
-        {{ placeholder }}
-      </option>
-      <option
-        v-for="(option, key) in options"
-        :key="key"
+  <div>
+    <div class="relative border px-4" :class="{ 'border-red' : error, 'border-navy' : !error }">
+      <select
+        class="border-0 py-3 w-full font-cinzel bg-white"
+        :name="name"
+        :required="required"
+        @change="error = false"
       >
-        {{ option }}
-      </option>
-    </select>
+        <option class="!text-gray-100 opacity-25">
+          {{ placeholder }}
+        </option>
+        <option
+          v-for="(option, key) in options"
+          :key="key"
+        >
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <div v-if="error" class="text-sm text-red mt-1 font-cinzel">
+      This field is required.
+    </div>
   </div>
 </template>
 
@@ -36,7 +42,21 @@ export default {
     },
     required: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    hasError: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return {
+      error: false
+    }
+  },
+  watch: {
+    hasError (val) {
+      this.error = val
     }
   }
 }

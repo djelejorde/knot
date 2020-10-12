@@ -13,7 +13,8 @@ module.exports = {
       gray: {
         100: '#989898',
         200: '#f1f1f1'
-      }
+      },
+      red: '#cc3c49'
     },
     fontFamily: {
       body: ['Cinzel', 'serif'],
@@ -49,9 +50,9 @@ module.exports = {
     screens: {
       xs: '480px',
       sm: '640px',
-      md: '1024px',
-      lg: '1280px',
-      xl: '1440px'
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px'
     },
     extend: {
       spacing: {

@@ -1,12 +1,19 @@
 <template>
-  <div class="border border-navy">
-    <textarea
-      rows="3"
-      class="border-0 py-3 px-4 w-full font-cinzel"
-      :name="name"
-      :placeholder="placeholder"
-      :required="required"
-    />
+  <div>
+    <div class="border" :class="{ 'border-red' : error, 'border-navy' : !error }">
+      <textarea
+        rows="3"
+        class="border-0 py-3 px-4 w-full font-cinzel"
+        :name="name"
+        :placeholder="placeholder"
+        :required="required"
+        @keyup="error = false"
+        @change="error = false"
+      />
+    </div>
+    <div v-if="error" class="text-sm text-red mt-1 font-cinzel">
+      This field is required.
+    </div>
   </div>
 </template>
 
@@ -24,7 +31,21 @@ export default {
     },
     required: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    hasError: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return {
+      error: false
+    }
+  },
+  watch: {
+    hasError (val) {
+      this.error = val
     }
   }
 }

@@ -1,12 +1,20 @@
 <template>
-  <div class="border border-navy">
-    <input
-      class="border-0 py-3 px-4 w-full font-cinzel"
-      :type="type"
-      :name="name"
-      :placeholder="placeholder"
-      :required="required"
-    >
+  <div>
+    <div class="border" :class="{ 'border-red' : error, 'border-navy' : !error }">
+      <input
+        v-model="value"
+        class="border-0 py-3 px-4 w-full font-cinzel"
+        :type="type"
+        :name="name"
+        :placeholder="placeholder"
+        :required="required"
+        @keyup="onType"
+        @change="error = false"
+      >
+    </div>
+    <div v-if="error" class="text-sm text-red mt-1 font-cinzel">
+      This field is required.
+    </div>
   </div>
 </template>
 
@@ -28,7 +36,28 @@ export default {
     },
     required: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    hasError: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return {
+      value: null,
+      error: false
+    }
+  },
+  watch: {
+    hasError (val) {
+      this.error = val
+    }
+  },
+  methods: {
+    onType () {
+      this.error = false
+      this.$emit('onType', this.value)
     }
   }
 }
