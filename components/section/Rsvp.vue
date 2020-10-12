@@ -11,21 +11,48 @@
         </h3>
         <span class="text-navy font-body text-xs xl:text-sm">we appreciate your response on or before october 17, 2020</span>
 
-        <div class="rsvp-form lg:px-8 xl:px-10">
-          <form>
-            <TextInput class="my-7" :name="'rsvp_code'" :placeholder="'rsvp code'" />
+        <form class="rsvp-form lg:px-8 xl:px-10" @submit="submit">
+          <TextInput
+            id="rsvp_code"
+            class="my-7"
+            :name="'rsvp_code'"
+            :placeholder="'rsvp code'"
+          />
 
-            <TextInput class="my-7" :name="'email'" :placeholder="'email'" />
+          <div class="hidden">
+            <TextInput
+              id="email"
+              class="my-7"
+              :type="'email'"
+              :name="'email'"
+              :placeholder="'email'"
+            />
 
-            <TextInput class="my-7" :name="'mobile_number'" :placeholder="'mobile number'" />
+            <TextInput
+              id="mobile_number"
+              class="my-7"
+              :name="'mobile_number'"
+              :placeholder="'mobile number'"
+            />
 
-            <TextArea class="my-7" :name="'allergies'" :placeholder="'allergies, if any'" />
+            <TextArea
+              id="allergies"
+              class="my-7"
+              :name="'allergies'"
+              :placeholder="'allergies, if any'"
+            />
 
-            <Dropdown class="my-7" :name="'rice'" :placeholder="'preferred type of rice'" :options="['Steam', 'Seafood Paella']" />
+            <Dropdown
+              id="rice"
+              class="my-7"
+              :name="'rice'"
+              :placeholder="'preferred type of rice'"
+              :options="['Steam', 'Seafood Paella']"
+            />
 
             <Button>GOING!</Button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
 
       <div class="w-full md:w-1/2 mt-10 md:mt-0 pt-5 text-navy sm:pl-5">
@@ -67,6 +94,69 @@
 
 <script>
 export default {
-  name: 'RsvpSection'
+  name: 'RsvpSection',
+  methods: {
+    validateForm () {
+      const fields = ['rsvp_code', 'email', 'mobile_number', 'allergies', 'rice']
+
+      for (const x in fields) {
+        const field = document.querySelector('#' + fields[x] + ' input')
+
+        if (field.value === '' || field.value === null || field.value === undefined) {
+          this.hasErrors.push(fields[x])
+        }
+      }
+
+      if (this.hasErrors.length) {
+        window.scrollTo(0, this.$el.offsetTop)
+
+        alert('Paumanhin ngunit hindi nailista ang iyong pangalan. May kaunting suliranin sa iyong mga sagot.')
+
+        return false
+      }
+
+      return true
+    },
+    sanitize (string) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        '/': '&#x2F;'
+      }
+      const reg = /[&<>"'/]/ig
+
+      return string.replace(reg, match => (map[match]))
+    },
+    submitForm () {
+      const valid = this.validateForm()
+
+      if (valid) {
+        const form = {
+          name: this.sanitize(this.$el.querySelector('#full_name input').value),
+          chapter: this.sanitize(this.$el.querySelector('#chapter input').value),
+          email: this.sanitize(this.$el.querySelector('#email input').value),
+          status: 'published'
+        }
+
+        this.postCollectionData('/participants', form)
+          .then((response) => {
+            if (response.status === 200) {
+              this.resetForm()
+              alert('Ang iyong pangalan ay nailista nang matagumpay!')
+            } else {
+              alert('Paumanhin ngunit hindi nailista ang iyong pangalan. May kaunting suliranin lamang sa aming panig. Subukan muli pagkaraan ng ilang minuto.')
+            }
+          })
+      }
+    },
+    resetForm () {
+      this.$el.querySelector('#full_name input').value = ''
+      this.$el.querySelector('#chapter input').value = ''
+      this.$el.querySelector('#email input').value = ''
+    }
+  }
 }
 </script>

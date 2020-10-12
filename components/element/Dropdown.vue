@@ -3,6 +3,7 @@
     <select
       class="border-0 py-3 w-full font-cinzel bg-white"
       :name="name"
+      :required="required"
     >
       <option class="!text-gray-100 opacity-25">
         {{ placeholder }}
@@ -32,6 +33,10 @@ export default {
     placeholder: {
       type: String,
       default: ''
+    },
+    required: {
+      type: Boolean,
+      default: true
     }
   }
 }

@@ -12,7 +12,7 @@ module.exports = {
       black: '#000000',
       gray: {
         100: '#989898',
-        200: '#f1f1f1',
+        200: '#f1f1f1'
       }
     },
     fontFamily: {
@@ -47,11 +47,11 @@ module.exports = {
       initial: 'initial'
     }),
     screens: {
-      'xs': '480px',
-      'sm': '640px',
-      'md': '1024px',
-      'lg': '1280px',
-      'xl': '1440px'
+      xs: '480px',
+      sm: '640px',
+      md: '1024px',
+      lg: '1280px',
+      xl: '1440px'
     },
     extend: {
       spacing: {

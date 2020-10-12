@@ -64,3 +64,6 @@ public/cliserver.php
 
 # Cache generated while filesystem adapter
 /cache/*
+
+# Admin
+/public/admin

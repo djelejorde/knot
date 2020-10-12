@@ -55,7 +55,7 @@
               in culpa qui officia deserunt mollit
               anim id est laborum.
             </div>
-        </div>
+          </div>
 
           <div class="md:w-full sm:flex-1 relative">
             <img class="z-40 block casual" :src="require('@/static/wacky_fade.jpg')" width="100%">

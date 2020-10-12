@@ -9,11 +9,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'An annual party of Singles for Christ Laguna West 2 which promotes fellowship, friendship and family during Christmas holidays.' },
+      { hid: 'description', name: 'description', content: 'So then, let us rid ourselves of everything that gets in the way, and of the sin which holds on to us so tightly, and let us run with determination the race that lies before us.' },
       { name: 'theme-color', content: '#ffffff' },
       { name: 'msapplication-TileColor', content: '#001333' },
       { name: 'msapplication-TileImage', content: '/favicon/mstile-144x144.png' },
-      { name: 'msapplication-config', content: '/favicon/browserconfig.xml' },
+      { name: 'msapplication-config', content: '/favicon/browserconfig.xml' }
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
@@ -21,7 +21,7 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-32x32.png' },
       { rel: 'manifest', href: '/favicon/site.webmanifest' },
       { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#5bbad5' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' }
     ]
   },
 
@@ -31,8 +31,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~/plugins/FetchData',
-    // '~/plugins/VueParallax'
+    '~/plugins/FetchData'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
