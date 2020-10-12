@@ -1,8 +1,5 @@
 <template>
-  <header class="fixed rounded-full md:rounded-none md:relative bg-white w-100 z-50 shadow">
-    <!-- <div class="monogram">
-      <Logo />
-    </div> -->
+  <header class="relative z-50 shadow w-full bg-white">
     <ul class="nav font-cinzel text-navy flex flex-wrap text-center justify-center items-center font-medium">
       <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#us'}">
         <li class="py-5 px-7">
@@ -34,11 +31,6 @@ export default {
 }
 </script>
 <style scoped>
-header {
-  right: 20px;
-  top: 20px;
-}
-
 .shadow {
   -webkit-box-shadow: 0px 4px 8px -6px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 4px 8px -6px rgba(0,0,0,0.75);
