@@ -5,7 +5,7 @@
     </h1>
 
     <div class="flex flex-wrap w-full">
-      <div class="w-full md:w-1/2 py-5 sm:pr-5 md:border-r border-opacity-25 border-navy">
+      <div id="rsvp-head" class="w-full md:w-1/2 py-5 sm:pr-5 md:border-r border-opacity-25 border-navy">
         <h3 class="font-cinzel text-navy font-bold text-md lg:text-lg xl:text-xl">
           WE'RE LOOKING FORWARD TO HAVE YOU
         </h3>
@@ -75,7 +75,7 @@
               class="my-7"
               :name="'rice'"
               :placeholder="'preferred type of rice'"
-              :options="['Steam', 'Seafood Paella']"
+              :options="['Steamed', 'Seafood Paella']"
               :has-error="hasErrors.includes('rice')"
             />
 
@@ -254,8 +254,11 @@ export default {
                   self.success = true
                 })
             } else {
-              // aler?t('Paumanhin ngunit hindi nailista ang iyong pangalan. May kaunting suliranin lamang sa aming panig. Subukan muli pagkaraan ng ilang minuto.')
+              self.isLoading = false
+              self.success = false
             }
+
+            window.scrollTo(0, document.querySelector('#rsvp-head').offsetTop)
           })
       }
     }
