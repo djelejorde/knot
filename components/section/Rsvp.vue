@@ -123,7 +123,7 @@
           <div class="text-navy font-cinzel text-md lg:text-lg xl:text-xl font-bold mb-5">
             ceremony
           </div>
-          <div class="font-scriptina font-bold text-3xl">
+          <div class="font-scriptina text-3xl">
             Saint Benedict Parish
           </div>
           <div class="lg:text-xs xl:text-sm font-body mt-6">
@@ -135,7 +135,7 @@
           <div class="text-navy font-cinzel text-md lg:text-lg xl:text-xl font-bold mb-5">
             reception
           </div>
-          <div class="font-scriptina font-bold text-3xl">
+          <div class="font-scriptina text-3xl">
             Blue Moon Los Ilustrados
           </div>
           <div class="lg:text-xs xl:text-sm font-body mt-6">
@@ -149,12 +149,20 @@
 
 <script>
 import Loading from 'vue-loading-overlay'
+import Button from '@/components/element/Button.vue'
+import Dropdown from '@/components/element/Dropdown.vue'
+import TextArea from '@/components/element/TextArea.vue'
+import TextInput from '@/components/element/TextInput.vue'
 import 'vue-loading-overlay/dist/vue-loading.css'
 
 export default {
   name: 'RsvpSection',
   components: {
-    Loading
+    Loading,
+    Button,
+    Dropdown,
+    TextArea,
+    TextInput
   },
   data () {
     return {

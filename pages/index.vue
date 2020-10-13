@@ -19,7 +19,29 @@
 </template>
 
 <script>
+import Logo from '@/components/page/Logo.vue'
+import Header from '@/components/page/Header.vue'
+import Footer from '@/components/page/Footer.vue'
+import Hero from '@/components/section/Hero.vue'
+import Us from '@/components/section/Us.vue'
+import Monogram from '@/components/section/Monogram.vue'
+import Gif from '@/components/section/Gif.vue'
+import Details from '@/components/section/Details.vue'
+import Rsvp from '@/components/section/Rsvp.vue'
+
 export default {
+  name: 'HomePage',
+  components: {
+    Logo,
+    Header,
+    Footer,
+    Hero,
+    Us,
+    Monogram,
+    Gif,
+    Details,
+    Rsvp
+  }
 }
 </script>
 

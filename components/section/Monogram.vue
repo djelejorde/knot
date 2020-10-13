@@ -7,7 +7,12 @@
 </template>
 
 <script>
+import Logo from '@/components/page/Logo.vue'
+
 export default {
-  name: 'MonogramSection'
+  name: 'MonogramSection',
+  components: {
+    Logo
+  }
 }
 </script>
