@@ -59,7 +59,8 @@ module.exports = {
         7: '2rem',
         8: '3rem',
         9: '4rem',
-        10: '5rem'
+        10: '5rem',
+        11: '22rem'
       },
       letterSpacing: {
         distanced: '1rem'
@@ -90,6 +91,6 @@ module.exports = {
   ],
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+    purgeLayersByDefault: true
+  }
 }

@@ -2,7 +2,7 @@
   <div>
     <div class="border" :class="{ 'border-red' : error, 'border-navy' : !error }">
       <textarea
-        rows="3"
+        :rows="rows"
         class="border-0 py-3 px-4 w-full font-cinzel"
         :name="name"
         :placeholder="placeholder"
@@ -21,6 +21,10 @@
 export default {
   name: 'TextArea',
   props: {
+    rows: {
+      type: Number,
+      default: 3
+    },
     name: {
       type: String,
       required: true
