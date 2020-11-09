@@ -6,9 +6,9 @@
           US
         </li>
       </nuxt-link>
-      <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#rsvp'}">
+      <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#gifts'}">
         <li class="py-5 px-7">
-          RSVP
+          GIFTS
         </li>
       </nuxt-link>
       <nuxt-link class="nav-item relative" :to="{ path: '/',hash:'#attire'}">
